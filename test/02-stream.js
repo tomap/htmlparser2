@@ -1,7 +1,7 @@
 var helper = require("./test-helper.js"),
-    Stream = require("..").WritableStream,
-    fs = require("fs"),
-    path = require("path");
+Stream = require("..").WritableStream,
+fs = require("fs"),
+path = require("path");
 
 helper.mochaTest("Stream", __dirname, function(test, cb){
 	var filePath = path.join(__dirname, "Documents", test.file);
@@ -18,6 +18,6 @@ helper.mochaTest("Stream", __dirname, function(test, cb){
 					else stream.end(data);
 				});
 			}
-		), test.options)
+			), test.options)
 	).on("error", cb);
 });
